@@ -1,6 +1,8 @@
 package com.example.logic30.orderdrink;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -17,19 +19,22 @@ public class ActMain extends Activity {
     private View.OnClickListener btnBlackTea_click=new View.OnClickListener() {
         @Override
         public void onClick(View v) {
+
             int t=Integer.parseInt(lblSum.getText().toString());
             if(t==0)
                 lblSum.setText("25");
             else{
                 n1 = Integer.parseInt(lblSum.getText().toString());
-                int n2 = Integer.parseInt(lblSum.getText().toString());
-                lblSum.setText(String.valueOf(n1+n2));
+
+                lblSum.setText(String.valueOf(n1+25));
             }
             String st=lblShow.getText().toString();
             if(st.equals("茶類"))
                 lblShow.setText("茶類\n紅茶");
             else
                 lblShow.setText(lblShow.getText().toString()+"\n紅茶");
+
+
 
         }
     };
@@ -42,7 +47,7 @@ public class ActMain extends Activity {
             else{
                 n1 = Integer.parseInt(lblSum.getText().toString());
                 int n2 = Integer.parseInt(lblSum.getText().toString());
-                lblSum.setText(String.valueOf(n1+n2));
+                lblSum.setText(String.valueOf(n1+25));
             }
             String st=lblShow.getText().toString();
             if(st.equals("茶類"))
@@ -59,8 +64,15 @@ public class ActMain extends Activity {
             int t=Integer.parseInt(lblSum.getText().toString());
             if(t==0)
                 lblSum.setText("25");
+            else{
+                n1 = Integer.parseInt(lblSum.getText().toString());
+                lblSum.setText(String.valueOf(n1+25));
+            }
+            String st=lblShow.getText().toString();
+            if(st.equals("茶類"))
+                lblShow.setText("茶類\n青茶");
             else
-                lblSum.setText(lblSum.getText().toString()+"25");
+                lblShow.setText(lblShow.getText().toString()+"\n青茶");
 
 
         }
@@ -71,9 +83,15 @@ public class ActMain extends Activity {
             int t=Integer.parseInt(lblSum.getText().toString());
             if(t==0)
                 lblSum.setText("25");
-
+            else{
+                n1 = Integer.parseInt(lblSum.getText().toString());
+                lblSum.setText(String.valueOf(n1+25));
+            }
+            String st=lblShow.getText().toString();
+            if(st.equals("茶類"))
+                lblShow.setText("茶類\n烏龍");
             else
-                lblSum.setText(lblSum.getText().toString()+"25");
+                lblShow.setText(lblShow.getText().toString()+"\n烏龍");
 
         }
     };
@@ -83,8 +101,12 @@ public class ActMain extends Activity {
             int t=Integer.parseInt(lblSum.getText().toString());
             if(t==0)
                 lblSum.setText("35");
-            else
-                lblSum.setText(lblSum.getText().toString()+"35");
+            else{
+                n1 = Integer.parseInt(lblSum.getText().toString());
+                lblSum.setText(String.valueOf(n1+35));
+            }
+
+            lblShow.setText(lblShow.getText().toString()+"\n多綠");
 
         }
     };
@@ -94,8 +116,12 @@ public class ActMain extends Activity {
             int t=Integer.parseInt(lblSum.getText().toString());
             if(t==0)
                 lblSum.setText("35");
-            else
-                lblSum.setText(lblSum.getText().toString()+"35");
+            else{
+                n1 = Integer.parseInt(lblSum.getText().toString());
+                lblSum.setText(String.valueOf(n1+35));
+            }
+
+            lblShow.setText(lblShow.getText().toString()+"\n梅綠");
 
         }
     };
@@ -105,8 +131,12 @@ public class ActMain extends Activity {
             int t=Integer.parseInt(lblSum.getText().toString());
             if(t==0)
                 lblSum.setText("35");
-            else
-                lblSum.setText(lblSum.getText().toString()+"35");
+            else{
+                n1 = Integer.parseInt(lblSum.getText().toString());
+                lblSum.setText(String.valueOf(n1+35));
+            }
+
+            lblShow.setText(lblShow.getText().toString()+"\n可可");
 
         }
     };
@@ -116,8 +146,12 @@ public class ActMain extends Activity {
             int t=Integer.parseInt(lblSum.getText().toString());
             if(t==0)
                 lblSum.setText("35");
-            else
-                lblSum.setText(lblSum.getText().toString()+"35");
+            else{
+                n1 = Integer.parseInt(lblSum.getText().toString());
+                lblSum.setText(String.valueOf(n1+35));
+            }
+
+            lblShow.setText(lblShow.getText().toString()+"\n薄青");
 
         }
     };
@@ -127,8 +161,12 @@ public class ActMain extends Activity {
             int t=Integer.parseInt(lblSum.getText().toString());
             if(t==0)
                 lblSum.setText("40");
-            else
-                lblSum.setText(lblSum.getText().toString()+"40");
+            else{
+                n1 = Integer.parseInt(lblSum.getText().toString());
+                lblSum.setText(String.valueOf(n1+40));
+            }
+
+            lblShow.setText(lblShow.getText().toString()+"\n奶茶");
 
         }
     };
@@ -138,8 +176,12 @@ public class ActMain extends Activity {
             int t=Integer.parseInt(lblSum.getText().toString());
             if(t==0)
                 lblSum.setText("40");
-            else
-                lblSum.setText(lblSum.getText().toString()+"40");
+            else{
+                n1 = Integer.parseInt(lblSum.getText().toString());
+                lblSum.setText(String.valueOf(n1+40));
+            }
+
+            lblShow.setText(lblShow.getText().toString()+"\n奶綠");
 
         }
     };
@@ -149,8 +191,12 @@ public class ActMain extends Activity {
             int t=Integer.parseInt(lblSum.getText().toString());
             if(t==0)
                 lblSum.setText("40");
-            else
-                lblSum.setText(lblSum.getText().toString()+"40");
+            else{
+                n1 = Integer.parseInt(lblSum.getText().toString());
+                lblSum.setText(String.valueOf(n1+40));
+            }
+
+            lblShow.setText(lblShow.getText().toString()+"\n杏奶");
 
         }
     };
@@ -160,34 +206,46 @@ public class ActMain extends Activity {
             int t=Integer.parseInt(lblSum.getText().toString());
             if(t==0)
                 lblSum.setText("40");
-            else
-                lblSum.setText(lblSum.getText().toString()+"40");
+            else{
+                n1 = Integer.parseInt(lblSum.getText().toString());
+                lblSum.setText(String.valueOf(n1+40));
+            }
+
+            lblShow.setText(lblShow.getText().toString()+"\n烏奶");
 
         }
     };
     private RadioGroup.OnCheckedChangeListener rgSweet_checked=new RadioGroup.OnCheckedChangeListener() {
         @Override
         public void onCheckedChanged(RadioGroup group, int checkedId) {
+            String st=lblShow.getText().toString();
+            String st2=lblShow2.getText().toString();
 
 
             switch(rgSweet.getCheckedRadioButtonId()){
                 case R.id.rBMoreS:
-                    lblShow2.setText("甜度\n多糖");
+                    if(st.length()-st2.length()==3)
+                        lblShow2.setText(lblShow2.getText().toString()+"\n多糖");
                     break;
                 case R.id.rBNormalS:
-                    lblShow2.setText("甜度\n正常");
+                    if(st.length()-st2.length()==3)
+                        lblShow2.setText(lblShow2.getText().toString()+"\n正常");
                     break;
                 case R.id.rBLessS:
-                    lblShow2.setText("甜度\n少糖");
+                    if(st.length()-st2.length()==3)
+                        lblShow2.setText(lblShow2.getText().toString()+"\n少糖");
                     break;
                 case R.id.rBHalfS:
-                    lblShow2.setText("甜度\n半糖");
+                    if(st.length()-st2.length()==3)
+                        lblShow2.setText(lblShow2.getText().toString()+"\n半糖");
                     break;
                 case R.id.rBLittleS:
-                    lblShow2.setText("甜度\n微糖");
+                    if(st.length()-st2.length()==3)
+                        lblShow2.setText(lblShow2.getText().toString()+"\n微糖");
                     break;
                 case R.id.rBNoS:
-                    lblShow2.setText("甜度\n無糖");
+                    if(st.length()-st2.length()==3)
+                        lblShow2.setText(lblShow2.getText().toString()+"\n無糖");
                     break;
             }
 
@@ -195,36 +253,234 @@ public class ActMain extends Activity {
     };
     private RadioGroup.OnCheckedChangeListener rgIce_checked=new RadioGroup.OnCheckedChangeListener() {
         @Override
+
         public void onCheckedChanged(RadioGroup group, int checkedId) {
+            String st=lblShow.getText().toString();
+            String st3=lblShow3.getText().toString();
+
+
             switch(rgIce.getCheckedRadioButtonId()){
                 case R.id.rBMoreI:
-                    lblShow3.setText("多冰");
+                    if(st.length()-st3.length()==3)
+                    lblShow3.setText(lblShow3.getText().toString()+"\n多冰");
+
                     break;
                 case R.id.rBNormalI:
-                    lblShow3.setText("正常");
+                    if(st.length()-st3.length()==3)
+                    lblShow3.setText(lblShow3.getText().toString()+"\n正常");
                     break;
                 case R.id.rBLessI:
-                    lblShow3.setText("少冰");
+                    if(st.length()-st3.length()==3)
+                    lblShow3.setText(lblShow3.getText().toString()+"\n少冰");
                     break;
                 case R.id.rBHalfI:
-                    lblShow3.setText("半冰");
+                    if(st.length()-st3.length()==3)
+                    lblShow3.setText(lblShow3.getText().toString()+"\n半冰");
                     break;
                 case R.id.rBlittleI:
-                    lblShow3.setText("微冰");
+                    if(st.length()-st3.length()==3)
+                    lblShow3.setText(lblShow3.getText().toString()+"\n微冰");
                     break;
                 case R.id.rBNoI:
-                    lblShow3.setText("去冰");
+                    if(st.length()-st3.length()==3)
+                    lblShow3.setText(lblShow3.getText().toString()+"\n去冰");
                     break;
                 case R.id.rBNormalT:
-                    lblShow3.setText("常溫");
+                    if(st.length()-st3.length()==3)
+                    lblShow3.setText(lblShow3.getText().toString()+"\n常溫");
                     break;
                 case R.id.rBWarmT:
-                    lblShow3.setText("溫");
+                    if(st.length()-st3.length()==3)
+                    lblShow3.setText(lblShow3.getText().toString()+"\n溫");
                     break;
                 case R.id.rBHotT:
-                    lblShow3.setText("熱");
+                    if(st.length()-st3.length()==3)
+                    lblShow3.setText(lblShow3.getText().toString()+"\n熱");
                     break;
             }
+        }
+    };
+    private RadioGroup.OnCheckedChangeListener rBadditional_checked=new RadioGroup.OnCheckedChangeListener() {
+        @Override
+        public void onCheckedChanged(RadioGroup group, int checkedId) {
+            String st=lblShow.getText().toString();
+            String st4=lblShow4.getText().toString();
+            int t=Integer.parseInt(lblSum.getText().toString());
+            switch(rBadditional.getCheckedRadioButtonId()){
+
+                case R.id.rBBoba:
+                    if(st.length()-st4.length()==3) {
+                        lblShow4.setText(lblShow4.getText().toString() + "\n波霸");
+                        if(t==0)
+                            lblSum.setText("5");
+                        else{
+                            n1 = Integer.parseInt(lblSum.getText().toString());
+                            lblSum.setText(String.valueOf(n1+5));
+                        }
+                    }
+                    break;
+                case R.id.rBPearl:
+                    if(st.length()-st4.length()==3) {
+                        lblShow4.setText(lblShow4.getText().toString() + "\n珍珠");
+                        if(t==0)
+                            lblSum.setText("5");
+                        else{
+                            n1 = Integer.parseInt(lblSum.getText().toString());
+                            lblSum.setText(String.valueOf(n1+5));
+                        }
+                    }
+                    break;
+                case R.id.rBCoconut:
+                    if(st.length()-st4.length()==3) {
+                        lblShow4.setText(lblShow4.getText().toString() + "\n耶果");
+                        if(t==0)
+                            lblSum.setText("5");
+                        else{
+                            n1 = Integer.parseInt(lblSum.getText().toString());
+                            lblSum.setText(String.valueOf(n1+5));
+                        }
+                    }
+                    break;
+                case R.id.rBPudding:
+                    if(st.length()-st4.length()==3) {
+                        lblShow4.setText(lblShow4.getText().toString() + "\n布丁");
+                        if(t==0)
+                            lblSum.setText("5");
+                        else{
+                            n1 = Integer.parseInt(lblSum.getText().toString());
+                            lblSum.setText(String.valueOf(n1+5));
+                        }
+                    }
+                    break;
+                case R.id.rBTeaJelly:
+                    if(st.length()-st4.length()==3) {
+                        lblShow4.setText(lblShow4.getText().toString() + "\n茶凍");
+                        if(t==0)
+                            lblSum.setText("5");
+                        else{
+                            n1 = Integer.parseInt(lblSum.getText().toString());
+                            lblSum.setText(String.valueOf(n1+5));
+                        }
+                    }
+                    break;
+            }
+        }
+    };
+    private View.OnClickListener btnBcup_click=new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            int t=Integer.parseInt(lblSum.getText().toString());
+            if(t==0)
+                lblSum.setText("5");
+            else{
+                n1 = Integer.parseInt(lblSum.getText().toString());
+                lblSum.setText(String.valueOf(n1+5));
+            }
+
+
+        }
+    };
+    private View.OnClickListener btnNcup_click=new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+
+        }
+    };
+    private View.OnClickListener btnx1_click=new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+
+
+        }
+    };
+    private View.OnClickListener btnx2_click= new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+
+            int t=Integer.parseInt(lblSum.getText().toString());
+            if(t==0)
+                lblSum.setText("0");
+            else{
+                n1 = Integer.parseInt(lblSum.getText().toString());
+                lblSum.setText(String.valueOf(n1*2));
+            }
+
+
+        }
+    };
+    private View.OnClickListener btnx3_click=new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            int t=Integer.parseInt(lblSum.getText().toString());
+            if(t==0)
+                lblSum.setText("0");
+            else{
+                n1 = Integer.parseInt(lblSum.getText().toString());
+                lblSum.setText(String.valueOf(n1*3));
+            }
+
+        }
+    };
+    private View.OnClickListener btnx4_click=new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            int t=Integer.parseInt(lblSum.getText().toString());
+            if(t==0)
+                lblSum.setText("0");
+            else{
+                n1 = Integer.parseInt(lblSum.getText().toString());
+                lblSum.setText(String.valueOf(n1*4));
+            }
+
+        }
+    };
+    private View.OnClickListener btnx5_click=new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            int t=Integer.parseInt(lblSum.getText().toString());
+            if(t==0)
+                lblSum.setText("0");
+            else{
+                n1 = Integer.parseInt(lblSum.getText().toString());
+                lblSum.setText(String.valueOf(n1*5));
+            }
+
+        }
+    };
+    private View.OnClickListener btnPay_click=new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            if(v.getId()==R.id.btnPay){
+                new AlertDialog.Builder(ActMain.this)
+                        .setTitle("總金額")
+                        .setIcon(R.mipmap.ic_launcher)
+                        .setMessage("共"+lblSum.getText().toString()+"元")
+                        .setPositiveButton("關閉視窗", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                finish();
+                            }
+                        })
+                        .show();
+
+            }
+
+        }
+    };
+
+
+
+    private View.OnClickListener btnBag_click=new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            int t=Integer.parseInt(lblSum.getText().toString());
+            if(t==0)
+                lblSum.setText("1");
+            else{
+                n1 = Integer.parseInt(lblSum.getText().toString());
+                lblSum.setText(String.valueOf(n1+1));
+            }
+
         }
     };
 
@@ -264,12 +520,33 @@ public class ActMain extends Activity {
         btnAlmond.setOnClickListener(btnAlmond_click);
         btnWMTea=findViewById(R.id.btnWMTea);
         btnWMTea.setOnClickListener(btnWMTea_click);
+        btnBcup=findViewById(R.id.btnBCup);
+        btnBcup.setOnClickListener(btnBcup_click);
+        btnNcup=findViewById(R.id.btnNcup);
+        btnNcup.setOnClickListener(btnNcup_click);
+        btnx1=findViewById(R.id.btnx1);
+        btnx1.setOnClickListener(btnx1_click);
+        btnx2=findViewById(R.id.btnx2);
+        btnx2.setOnClickListener(btnx2_click);
+        btnx3=findViewById(R.id.btnx3);
+        btnx3.setOnClickListener(btnx3_click);
+        btnx4=findViewById(R.id.btnx4);
+        btnx4.setOnClickListener(btnx4_click);
+        btnx5=findViewById(R.id.btnx5);
+        btnx5.setOnClickListener(btnx5_click);
+        btnPay=findViewById(R.id.btnPay);
+        btnPay.setOnClickListener(btnPay_click);
+        btnBag=findViewById(R.id.btnBag);
+        btnBag.setOnClickListener(btnBag_click);
 
         rgSweet=findViewById(R.id.rgSweet);
         rgSweet.setOnCheckedChangeListener(rgSweet_checked);
 
         rgIce=findViewById(R.id.rgIce);
         rgIce.setOnCheckedChangeListener(rgIce_checked);
+
+        rBadditional=findViewById(R.id.rBadditional);
+        rBadditional.setOnCheckedChangeListener(rBadditional_checked);
 
 
     }
@@ -290,6 +567,17 @@ public class ActMain extends Activity {
     Button btnMilkG;
     Button btnAlmond;
     Button btnWMTea;
+    Button btnBcup;
+    Button btnNcup;
+    Button btnx1;
+    Button btnx2;
+    Button btnx3;
+    Button btnx4;
+    Button btnx5;
+    Button btnPay;
+    Button btnBag;
     RadioGroup rgSweet;
     MyRadioButton1 rgIce;
+    RadioGroup rBadditional;
+    RadioButton rBMoreI;
 }
